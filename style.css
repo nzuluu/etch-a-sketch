@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*This centers the grid in the middle*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    min-height: 500px;
+}
+
+.container div {
+    height: 30px;
+    width: 30px;
+    background: black;
+}
