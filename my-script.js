@@ -14,7 +14,7 @@ makeGrid();
 
 const hover = document.getElementById("container");
 
-hover.addEventListener("mouseenter", (event) => {
+hover.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = "blue";
 })
 
