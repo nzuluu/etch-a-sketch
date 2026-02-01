@@ -18,3 +18,10 @@ hover.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = "blue";
 })
 
+let input = 0;
+const btn = document.querySelector("#btn");
+btn.onclick = () => input = prompt("Number of squares per side:");
+
+if (input <= 100) {
+
+}

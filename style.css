@@ -6,6 +6,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+button {
+    margin-bottom: 20px;
 }
 
 /*This centers the grid in the middle*/
