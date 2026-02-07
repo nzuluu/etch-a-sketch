@@ -1,10 +1,13 @@
+let numberOfGrid = 16;
 function makeGrid() {
     const container = document.querySelector(".container");
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < numberOfGrid; i++) {
         const column = document.createElement("div");
-        for(let j = 0; j < 16; j++){
+        column.classList.add("box");
+        for(let j = 0; j < numberOfGrid; j++){
             const row = document.createElement("div");
             row.style.border = "1px solid white";
+            row.classList.add("box");
             column.appendChild(row);
         }
         container.appendChild(column);
