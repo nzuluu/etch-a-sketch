@@ -1,12 +1,9 @@
-html{
-    height: 100%;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
 }
 
 button {
@@ -16,11 +13,16 @@ button {
 /*This centers the grid in the middle*/
 .container {
     display: flex;
-    max-width: 960px;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 6px solid yellow;
+    width: 640px;
+    height: 640px;
 }
 
 .box {
-    min-width: 10px;
-    min-height: 10px;
+    /*box-sizing determine total width and height when calc*/
+    box-sizing: border-box;
+    border: 1px solid red;
     background: black;
 }

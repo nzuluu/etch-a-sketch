@@ -4,12 +4,17 @@ function makeGrid(numberOfGrid) {
     for (let i = 0; i < numberOfGrid; i++) {
         const column = document.createElement("div");
         column.classList.add("box");
-        for(let j = 0; j < numberOfGrid; j++){
+        for(let j = 1; j < numberOfGrid; j++){
             const row = document.createElement("div");
-            row.style.border = "1px solid white";
             row.classList.add("box");
-            column.appendChild(row);
+            //Used `${x}` to calculate width and height
+            row.style.width = `${640/numberOfGrid}px`;
+            row.style.height = `${640/numberOfGrid}px`;
+            container.appendChild(row);
         }
+        //Used `${x}` to calculate width and height
+        column.style.width = `${640/numberOfGrid}px`;
+        column.style.height = `${640/numberOfGrid}px`;
         container.appendChild(column);
     }
 }
