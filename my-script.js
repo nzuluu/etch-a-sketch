@@ -1,5 +1,5 @@
-let numberOfGrid = 16;
-function makeGrid() {
+function makeGrid(numberOfGrid) {
+    deleteGrid();
     const container = document.querySelector(".container");
     for (let i = 0; i < numberOfGrid; i++) {
         const column = document.createElement("div");
@@ -13,18 +13,31 @@ function makeGrid() {
         container.appendChild(column);
     }
 }
-makeGrid();
 
+let numberOfGrid = 16;
+makeGrid(numberOfGrid);
+
+const btn = document.querySelector("#btn");
+btn.onclick = () => (changeGrid());
+
+function changeGrid() {
+    numberOfGrid = prompt("Number of squares per side:",);
+    if (numberOfGrid <= 100) {
+        makeGrid(numberOfGrid)
+    }
+    else {
+        numberOfGrid = prompt("Number of squares per side:");
+    }
+}
+
+function deleteGrid() {
+    const allBox = document.querySelectorAll(".box");
+    allBox.forEach((allBox) => {
+        allBox.remove();
+    })
+}
 const hover = document.getElementById("container");
 
 hover.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = "blue";
 })
-
-let input = 0;
-const btn = document.querySelector("#btn");
-btn.onclick = () => input = prompt("Number of squares per side:");
-
-if (input <= 100) {
-
-}
