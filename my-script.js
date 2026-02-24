@@ -41,8 +41,17 @@ function deleteGrid() {
         allBox.remove();
     })
 }
-const hover = document.getElementById("container");
+const mouseHold = document.getElementById("container");
+let isHold = true;
 
-hover.addEventListener("mouseover", (event) => {
+mouseHold.addEventListener("mousedown", () => {
+    isHold = true;
+    mouseHold.addEventListener("mouseover", (event) => {
+    if (!isHold) return;
     event.target.style.backgroundColor = "blue";
+    }) 
+})
+
+mouseHold.addEventListener("mouseup", () => {
+    isHold = false;
 })
