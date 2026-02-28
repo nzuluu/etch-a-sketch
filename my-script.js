@@ -47,11 +47,19 @@ let isHold = true;
 mouseHold.addEventListener("mousedown", () => {
     isHold = true;
     mouseHold.addEventListener("mouseover", (event) => {
-    if (!isHold) return;
-    event.target.style.backgroundColor = "blue";
-    }) 
+        let color = randomColor();
+
+        if (!isHold) return;
+        event.target.style.backgroundColor = color;
+        }) 
 })
 
 mouseHold.addEventListener("mouseup", () => {
     isHold = false;
 })
+function randNum() {
+    return (Math.random() * 256);
+}
+function randomColor() {
+    return `rgb(${randNum()},${randNum()},${randNum()})`;
+}
