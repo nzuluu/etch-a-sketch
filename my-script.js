@@ -1,6 +1,7 @@
 function makeGrid(numberOfGrid) {
     deleteGrid();
     const container = document.querySelector(".container");
+    container.style.userSelect = "none";
     for (let i = 0; i < numberOfGrid; i++) {
         const column = document.createElement("div");
         column.classList.add("box");

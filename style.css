@@ -21,8 +21,6 @@ button {
 }
 
 .box {
-    /*box-sizing determine total width and height when calc*/
     box-sizing: border-box;
-    border: 1px solid red;
     background: black;
 }
